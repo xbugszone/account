@@ -2,7 +2,7 @@
 
 namespace Xbugs\Account;
 
-use Nyholm\Psr7\Response;
+use Xbugs\Account\Responses\NotFoundResponse;
 use Nyholm\Psr7\ServerRequest;
 
 class Kernel
@@ -12,7 +12,7 @@ class Kernel
         
     }
 
-    public function processRequest(ServerRequest $request) : Response {
-        return new Response(200,[],'hello World');
+    public function processRequest(ServerRequest $request) : NotFoundResponse {
+        return new NotFoundResponse();
     }
 }
